@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- SWIPER CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <title>Houses</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="container mx-auto bg-white p-5 flex justify-between items-center">
+            <div class="w1/4">
+                <p class="font-bold text-purple-700 text-2xl cursor-pointer">HOLUX</p>
+            </div>
+            <div class="w-2/4 md:flex md:justify-evenly hidden">
+                <a href="#home" class="text-gray-500 hover:text-purple-800 hover:font-bold">Home</a>
+                <a href="#about" class="text-gray-500 hover:text-purple-800 hover:font-bold">About</a>
+                <a href="#project" class="text-gray-500 hover:text-purple-800 hover:font-bold">Project</a>
+                <a href="#contact" class="text-gray-500 hover:text-purple-800 hover:font-bold">Contact</a>
+            </div>
+            <div class="w-1/4 md:flex md:justify-evenly gap-2 hidden">
+                <button class="border border-black hover:bg-gray-100 py-2 px-5 rounded">Log In</button>
+                <button class="py-2 px-5 rounded bg-purple-700 hover:bg-purple-800 text-white">Register Now</button>
+            </div>
+            <button class="md:hidden font-bold text-xl cursor-pointer" onclick="menuToggle()">
+                <i class="ri-menu-line"></i>
+            </button>
+        </div>
+
+        <div class="md:hidden">
+            <div id="menu" class="absolute flex hidden flex-col justify-center items-center gap-3 left-10 right-10 bg-purple-100 rounded-lg drop-shadow-md p-2 border border-gray-300">
+                <a href="#home" class="text-purple-800 font-bold">Home</a>
+                <a href="#about" class="text-purple-800 font-bold">About</a>
+                <a href="#project" class="text-purple-800 font-bold">Project</a>
+                <a href="#contact" class="text-purple-800 font-bold">Contact</a>
+                <div class="w-full flex justify-center items-center gap-4 ">
+                    <button class="border border-black hover:bg-gray-100 py-2 px-5 rounded">Log In</button>
+                    <button class="py-2 px-5 rounded bg-purple-700 hover:bg-purple-800 text-white">Register Now</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="container mx-auto flex justify-center items-center flex-col-reverse lg:flex-row p-5 gap-3">
+            <div class="lg:w-1/2 p-6 flex flex-col gap-5">
+                <p class="xl:text-6xl text-5xl">A Home built and unique with love and dreams</p>
+                <p class="text-gray-600 font-bold">Discover a curated selection of homes,apartments, and commercial properties, along with expert tips, market insights, and valuable resources to help you make the best real estate decisions, join us today and let's unlock the doors to your deam property!</p>
+                <div class="flex gap-4">
+                    <button class="py-2 px-5 rounded bg-purple-700 hover:bg-purple-800 text-white">Buy Now</button>
+                    <button class="border border-black hover:bg-gray-100 py-2 px-5 rounded">Learn More</button>
+                </div>
+            </div>
+            <div class="lg:w-1/2 flex justify-center items-center">
+                <img src="images/image1.jpg" alt="" srcset="">
+            </div>
+            
+    </section>
+
+    <section id="about">
+        <div class="container mx-auto flex flex-col lg:flex-row mt-10 lg:mt-32 p-6 gap-6 mb-10">
+            <div class="lg:w-1/2 flex justify-center items-center">
+                <img src="images/image3.jpg" alt="" srcset="">
+            </div>
+            <div class="lg:w-1/2 flex flex-col justify-center gap-4 p-5">
+                <p class="text-purple-700 xl:text-3xl text-2xl font-bold">ABOUT US</p>
+                <p class="xl:text-4xl text-xl sm:text-2xl font-bold">Award winning real estate company in Dubai</p>
+                <p class="text-gray-600 text-xl">Whether you're first time homebuyer,a seasoned investor, or simply looking for a change, we're here to guide you every step of the way. Our mission is to make your real estate journey smooth and successful.</p>
+                <div class="flex gap-5">
+                    <div class="flex flex-col gap-1">
+                        <p class="text-purple-700">PREVIOUS PROJECTS</p>
+                        <p class="xl:text-3xl">+34</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-purple-700">YEARS EXPERIENCE</p>
+                        <p class="xl:text-3xl">+20</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-purple-700">ONGOING PROJECTS</p>
+                        <p class="xl:text-3xl">17</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="project">
+        <div class="container mx-auto p-6 mb-20 ">
+            <p class="text-purple-700 xl:text-3xl text-2xl font-bold mb-3">Ongoing Projects</p>
+            <p class="text-gray-600">We are dedicated to helping you to find you dream property with ease and confidence.</p>
+
+            <div class="container mx-auto mt-7">
+                <!-- Slider main container -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide flex justify-center items-center relative">
+                            <div class="w-2/3">
+                                <img src="images/image5.jpg" alt="" class="object-cover">
+                            </div>
+                            <div class="absolute bg-white  w-3/6 h-2/6 md:w-3/6 md:h-2/6 lg:w-2/5 lg:h-1/4 bottom-1.5 rounded-lg drop-shadow-lg ">
+                                <div class="h-full flex flex-col py-2 sm:p-0 gap-1 lg:gap-2 justify-center items-center w-full">
+                                    <p class="font-semibold lg:font-bold text-xs sm:text-xl md:text-3xl">Cityscape Residences</p>
+                                    <div class="flex gap-2 text-gray-700 text-xs md:text-xl">
+                                        <i class="ri-map-pin-line"></i>
+                                        <p>Downtown Dubai</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <div class="w-2/3 flex justify-center items-center">
+                                <img src="images/image6.jpg" alt="" class="object-cover">
+                            </div>
+                            <div class="absolute bg-white  w-3/6 h-2/6 md:w-3/6 md:h-2/6 lg:w-2/5 lg:h-1/4 bottom-1.5 rounded-lg drop-shadow-lg ">
+                                <div class="h-full flex flex-col py-2 sm:p-0 gap-1 lg:gap-2 justify-center items-center w-full">
+                                    <p class="font-semibold lg:font-bold text-xs sm:text-xl md:text-3xl">Bliss Residences</p>
+                                    <div class="flex gap-2 text-gray-700 text-xs md:text-xl">
+                                        <i class="ri-map-pin-line"></i>
+                                        <p>Jumeirah Beach, Dubai</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex justify-center items-center">
+                            <div class="w-2/3 flex justify-center items-center">
+                                <img src="images/image4.jpg" alt="" class="object-cover">
+                            </div>
+                            <div class="absolute bg-white  w-3/6 h-2/6 md:w-3/6 md:h-2/6 lg:w-2/5 lg:h-1/4 bottom-1.5 rounded-lg drop-shadow-lg ">
+                                <div class="h-full flex flex-col py-2 sm:p-0 gap-1 lg:gap-2 justify-center items-center w-full">
+                                    <p class="font-semibold lg:font-bold text-xs sm:text-xl md:text-3xl">Desert Rose</p>
+                                    <div class="flex gap-2 text-gray-700 text-xs md:text-xl">
+                                        <i class="ri-map-pin-line"></i>
+                                        <p>Al Brasha, Dubai</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev text-purple-800" ></div>
+                        <div class="swiper-button-next text-purple-800" ></div>
+                    
+                    </div>
+            </div>
+        </div>
+
+        
+
+    </section>
+
+    <section id="contact">
+        <div class="container mx-auto p-5 mb-6 mt-14 flex flex-col lg:flex-row gap-10 ">
+            <div class="lg:w-1/2 flex justify-center items-center xl:p-4">
+                <img src="images/image2.jpg" alt="" srcset="">
+            </div>
+            <div class="lg:w-1/2 p-5 flex flex-col justify-center gap-5">
+                <p class="text-purple-700 xl:text-3xl text-2xl font-bold">CONTACT US</p>
+                <p class="text-gray-600 font-bold">Discover the differnce, where expertise meets excellence in real estate. Let's embark on this exciting journey together</p>
+                <input type="text" class="bg-gray-300 text-gray-700 py-2 px-4 rounded outline-none focus:border-2 focus:border-purple-900" placeholder="First Name">
+                <input type="text" class="bg-gray-300 text-gray-700 py-2 px-4 rounded outline-none focus:border-2 focus:border-purple-900" placeholder="Last Name">
+                <input type="email" class="bg-gray-300 text-gray-700 py-2 px-4 rounded outline-none focus:border-2 focus:border-purple-900" placeholder="Email Address">
+                <input type="text" class="bg-gray-300 text-gray-700 py-2 px-4 rounded outline-none focus:border-2 focus:border-purple-900" placeholder="Phone Number">
+                <textarea class="bg-gray-300 rounded p-2 outline-none focus:border-2 focus:border-purple-900" cols="30" rows="10" placeholder="Description"></textarea>
+                <div>
+                    <button class="py-2 px-5 rounded bg-purple-700 hover:bg-purple-800 text-white uppercase">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white px-5 py-8">
+        <div class="container mx-auto flex flex-col md:flex-row gap-4 md:justify-evenly ">
+            <div class="md:w-1/4 flex flex-col  gap-3">
+                <p class="uppercase font-bold text-xl">Holux</p>
+                <p class="md:text-left text-center">Our team of seasoned professionals is committed to providing you with exceptional service, in-depth market knowledge, and personalized solutions tailored to you unique needs.</p>
+                <div class="flex md:justify-start justify-center items-center  gap-4 text-xl">
+                    <a href="#" class="hover:text-purple-800"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#" class="hover:text-purple-800"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="hover:text-purple-800"><i class="ri-twitter-fill"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-2">
+                <p class="font-bold text-xl">Company Info</p>
+                <div class="flex flex-col gap-4 text-center md:text-left">
+                    <a href="#home" class="hover:text-purple-800">Home</a>
+                    <a href="#about" class="hover:text-purple-800">About</a>
+                    <a href="#project" class="hover:text-purple-800">Project</a>
+                    <a href="#contact" class="hover:text-purple-800">Contact</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-2">
+                <p class="font-bold text-xl">Resources</p>
+                <div class="flex flex-col gap-4 text-center md:text-start">
+                    <a href="#" class="hover:text-purple-800">Terms</a>
+                    <a href="#" class="hover:text-purple-800">Conditions</a>
+                    <a href="#" class="hover:text-purple-800">Policy</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-3">
+                <p class="text-xl font-bold">Contact</p>
+                <div class="flex flex-col gap-3">
+                    <div class="flex justify-center md:justify-start gap-2 hover:text-purple-800 cursor-pointer">
+                        <i class="ri-mail-line"></i>
+                        <p>Holux@gmail.com</p>
+                    </div>
+                    <div class="flex justify-center md:justify-start gap-2 hover:text-purple-800 cursor-pointer">
+                        <i class="ri-phone-line"></i>
+                        <p>+91 9876543210</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
